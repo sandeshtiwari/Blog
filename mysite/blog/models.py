@@ -17,6 +17,10 @@ class Post(models.Model):
     def approve_comments(self):
         return self.comments.filter(approved_comment=True)
 
+    # Once an instace of this class is made this method runs
+    def get_absolute_url(self):
+        return reverse('post_detail',kwargs={'pk':self.pk})
+
     def __str__(self):
         return self.title
 
