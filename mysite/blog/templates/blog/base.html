@@ -42,26 +42,26 @@
             <a class="nav-link" href="https://www.linkedin.com/in/sandesh-tiwari/">LinkedIn</a>
           </li>
         </ul>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'post_new' %}">New Post</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-              </li>
-              <li class="nav-item">
-                  <a>Welcome: {{ user.username }}</a>
-              </li>
-              {% else %}
-              <li> <a class="nav-link" href="{% url 'login' %}"> <i class="fas fa-user"></i> </a> </li>
-              {% endif %}
-            </ul>
-        </div>
+        <!-- <div class="navbar-collapse collapse w-100 order-3 dual-collapse2"> -->
+        <ul class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'post_new' %}">New Post</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+          </li>
+          <li class="nav-item">
+              <a>Welcome: {{ user.username }}</a>
+          </li>
+          {% else %}
+          <li> <a class="nav-link" href="{% url 'login' %}"> <i class="fas fa-user"></i> </a> </li>
+          {% endif %}
+        </ul>
+        <!-- </div> -->
       </div>
   </nav>
   <!-- Content block -->
