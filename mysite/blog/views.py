@@ -5,7 +5,7 @@ from blog.forms import PostForm, CommentForm
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import (TemplateView, ListView
+from django.views.generic import (TemplateView, ListView,
                                     DetailView, CreateView,
                                      UpdateView, DeleteView)
 # Create your views here.
